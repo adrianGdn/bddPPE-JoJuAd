@@ -31,7 +31,6 @@ CREATE TABLE IF NOT EXISTS `fraisforfait` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB;
 
-
 -- --------------------------------------------------------
 
 --
@@ -63,7 +62,6 @@ CREATE TABLE IF NOT EXISTS `visiteur` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB;
 
-
 -- --------------------------------------------------------
 
 --
@@ -81,7 +79,6 @@ CREATE TABLE IF NOT EXISTS `fichefrais` (
   FOREIGN KEY (`idEtat`) REFERENCES etat(`id`),
   FOREIGN KEY (`idVisiteur`) REFERENCES visiteur(`id`)
 ) ENGINE=InnoDB;
-
 
 -- --------------------------------------------------------
 
