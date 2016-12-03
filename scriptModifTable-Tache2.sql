@@ -7,16 +7,6 @@ CREATE TABLE IF NOT EXISTS `typeacteur` (
   `leTypeActeur` varchar(20),
   PRIMARY KEY (id)
 ) ENGINE=InnoDB;
--- --------------------------------------------------------
-
---
--- Ajout de données
---
-
-INSERT INTO `typeacteur` (`leTypeActeur`) VALUES
-("Visiteur"),
-("Comptable"),
-("Administrateur");
 
 -- --------------------------------------------------------
 
@@ -34,9 +24,28 @@ RENAME TO `acteur`;
 --
 
 ALTER TABLE `acteur`
-ADD `leTypeActeur` varchar(20) NOT NULL;
+ADD `idTypeActeur` int(11);
 
-ALTER TABLE acteur 
-ADD CONSTRAINT FK_Acteur_TypeActeur 
-FOREIGN KEY (leTypeActeur) 
-REFERENCES typeacteur(leTypeActeur);
+ALTER TABLE `acteur`
+ADD CONSTRAINT `FK_Acteur_TypeActeur` FOREIGN KEY (`idTypeActeur`) REFERENCES `typeacteur` (`id`);
+
+-- --------------------------------------------------------
+
+--
+-- Ajout de données dans la table `TypeActeur`
+--
+
+INSERT INTO `typeacteur` (`leTypeActeur`) VALUES
+("Visiteur"),
+("Comptable"),
+("Administrateur");
+
+-- --------------------------------------------------------
+
+--
+-- Ajout du type d'acteur dans la table `Acteur`
+--
+
+UPDATE `acteur` SET `idTypeActeur` = 1;
+
+-- --------------------------------------------------------
