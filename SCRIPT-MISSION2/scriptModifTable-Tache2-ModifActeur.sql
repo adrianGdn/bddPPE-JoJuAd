@@ -20,14 +20,11 @@ RENAME TO `acteur`;
 -- --------------------------------------------------------
 
 --
--- Ajout d'une clé étrangère pour la table `acteur`
+-- Ajout d'une colonne pour la table `Acteur`
 --
 
 ALTER TABLE `acteur`
 ADD `idTypeActeur` int(11);
-
-ALTER TABLE `acteur`
-ADD CONSTRAINT `FK_Acteur_TypeActeur` FOREIGN KEY (`idTypeActeur`) REFERENCES `typeacteur` (`id`);
 
 -- --------------------------------------------------------
 
@@ -36,9 +33,9 @@ ADD CONSTRAINT `FK_Acteur_TypeActeur` FOREIGN KEY (`idTypeActeur`) REFERENCES `t
 --
 
 INSERT INTO `typeacteur` (`leTypeActeur`) VALUES
+("Administrateur"),
 ("Visiteur"),
-("Comptable"),
-("Administrateur");
+("Comptable");
 
 -- --------------------------------------------------------
 
@@ -46,6 +43,24 @@ INSERT INTO `typeacteur` (`leTypeActeur`) VALUES
 -- Ajout du type d'acteur dans la table `Acteur`
 --
 
-UPDATE `acteur` SET `idTypeActeur` = 1;
+UPDATE `acteur` SET `idTypeActeur` = 2;
+
+-- --------------------------------------------------------
+
+--
+-- On augmente la taille de la colonne mdp de la table `Acteur`
+--
+
+ALTER TABLE `acteur`
+MODIFY `idTypeActeur` int(11) NOT NULL;
+
+-- --------------------------------------------------------
+
+--
+-- Ajout d'une clé étrangère pour la table `Acteur`
+--
+
+ALTER TABLE `acteur`
+ADD CONSTRAINT `FK_Acteur_TypeActeur` FOREIGN KEY (`idTypeActeur`) REFERENCES `typeacteur` (`id`);
 
 -- --------------------------------------------------------
