@@ -4,10 +4,9 @@ ALTER TABLE `lignefraisforfait` ADD `montant` DECIMAL(10) NOT NULL AFTER `quanti
 
 -- Ajout du TRIGGER
 
-CREATE TRIGGER `modifMontant` AFTER UPDATE ON `lignefraisforfait` FOR EACH ROW
-UPDATE lignefraisforfait
-SET lignefraisforfait.montant = fraisforfait.montant * lignefraisforfait.quantite
-WHERE fraisforfait.id = lignefraisforfait.idFraisForfait
+CREATE TRIGGER `modifMontant` BEFORE UPDATE ON `lignefraisforfait`
+ FOR EACH ROW SET NEW.montant = (SELECT fraisforfait.montant * NEW.quantite FROM fraisforfait
+WHERE fraisforfait.id = NEW.idFraisForfait)
 
 -- Test du TRIGGER
 
