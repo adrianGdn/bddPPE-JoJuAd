@@ -11,6 +11,8 @@ ADD `mail` varchar(50);
 -- Ajout de données dans la table `Acteur`
 --
 
+-- a refaire via procédure stockée
+
 UPDATE `acteur` SET `mail` = 'louis.villechalane@gsb.com' WHERE `id` = 'a131';
 UPDATE `acteur` SET `mail` = 'david.andre@gsb.com' WHERE `id` = 'a17';
 UPDATE `acteur` SET `mail` = 'christian.bedos@gsb.com' WHERE `id` = 'a55';
