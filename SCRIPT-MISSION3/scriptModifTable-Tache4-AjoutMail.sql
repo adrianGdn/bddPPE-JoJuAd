@@ -39,15 +39,15 @@ UPDATE `acteur` SET `mail` = 'celine.enault-pascreau@gsb.com' WHERE `id` = 'e5';
 UPDATE `acteur` SET `mail` = 'valerie.eynde@gsb.com' WHERE `id` = 'e52';
 UPDATE `acteur` SET `mail` = 'jacques.finck@gsb.com' WHERE `id` = 'f21';
 
---CREATE PROCEDURE ajouteMail
---	DECLARE leMail varchar(50);
---	DECLARE lePrenom char(30);
---	DECLARE leNom char(30);
+-- CREATE PROCEDURE ajouteMail
+-- DECLARE leMail varchar(50);
+-- DECLARE lePrenom char(30);
+-- DECLARE leNom char(30);
 
---	SET @leMail = 'SELECT `prenom` FROM `acteur`;' + '.' + 'SELECT `nom` FROM `acteur`;' + '@gsb.com'
---	PRINT @leMail;
---	Exec(@leMail)
+-- SET @leMail = 'SELECT `prenom` FROM `acteur`;' + '.' + 'SELECT `nom` FROM `acteur`;' + '@gsb.com'
+-- PRINT @leMail;
+-- Exec(@leMail)
 
---EXEC ajouteMail;
+-- EXEC ajouteMail;
 
 -- --------------------------------------------------------
