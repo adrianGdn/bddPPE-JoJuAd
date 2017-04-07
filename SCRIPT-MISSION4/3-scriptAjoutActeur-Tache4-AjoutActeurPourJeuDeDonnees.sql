@@ -1,5 +1,5 @@
 --
--- Ajout d'acteur pour la table `acteur`
+-- Ajout d'acteur pour la table `Acteur`
 --
 
 INSERT INTO `acteur`(`id`, `nom`, `prenom`, `login`, `mdp`, `adresse`, `cp`, `ville`, `dateEmbauche`, `idTypeActeur`, `oldMdp`, `mail`, `version`) VALUES 
