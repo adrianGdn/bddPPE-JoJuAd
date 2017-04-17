@@ -1,11 +1,7 @@
--- phpMyAdmin SQL Dump
--- version 3.3.9
+-- --------------------------------------------------------
+-- phpMyAdmin SQL
 -- http://www.phpmyadmin.net
---
--- Serveur: localhost
--- Généré le : Lun 04 Juillet 2011 à 14:08
--- Version du serveur: 5.5.8
--- Version de PHP: 5.3.5
+-- --------------------------------------------------------
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 
@@ -15,7 +11,7 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Base de données: `gsb_frais`
+-- Base de données : `gsbapplifrais`
 --
 
 -- --------------------------------------------------------
