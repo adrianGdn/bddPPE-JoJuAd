@@ -38,6 +38,9 @@ UPDATE `acteur` SET `mail` = 'claude.duncombe@gsb.com' WHERE `id` = 'e49';
 UPDATE `acteur` SET `mail` = 'celine.enault-pascreau@gsb.com' WHERE `id` = 'e5';
 UPDATE `acteur` SET `mail` = 'valerie.eynde@gsb.com' WHERE `id` = 'e52';
 UPDATE `acteur` SET `mail` = 'jacques.finck@gsb.com' WHERE `id` = 'f21';
+UPDATE `acteur` SET `mail` = 'fremont.fernande@gsb.com' WHERE `id` = 'f39';
+UPDATE `acteur` SET `mail` = 'alain.gest@gsb.com' WHERE `id` = 'f4';
+UPDATE `acteur` SET `mail` = 'administrateur@gsb.com' WHERE `id` = 'admi';
 
 -- CREATE PROCEDURE ajouteMail
 -- DECLARE leMail varchar(50);
