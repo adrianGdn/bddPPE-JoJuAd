@@ -7,15 +7,6 @@ UPDATE `lignefraisforfait` SET `description` = 'Description 1';
 -- --------------------------------------------------------
 
 --
--- Ajout d'une colonne pour la table `LigneFraisForfait`
---
-
-ALTER TABLE `lignefraisforfait`
-ALTER COLUMN `montant` DECIMAL(10,0);
-
--- --------------------------------------------------------
-
---
 -- On ajoute une colonne temporaire qui va contenir les montants de la colonne `montant`
 -- Puis on va supprimer la colonne `montant` pour ensuite la recréer sans sa contrainte initiale
 --
