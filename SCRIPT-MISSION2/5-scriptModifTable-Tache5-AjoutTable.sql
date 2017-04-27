@@ -1,12 +1,4 @@
 --
--- Modification des description pour la table `LigneFraisForfait`
---
-
-UPDATE `lignefraisforfait` SET `description` = 'Description 1';
-
--- --------------------------------------------------------
-
---
 -- On ajoute une colonne temporaire qui va contenir les montants de la colonne `montant`
 -- Puis on va supprimer la colonne `montant` pour ensuite la recréer sans sa contrainte initiale
 --
@@ -49,5 +41,13 @@ ADD `dateFraisForfait` DATE NOT NULL;
 
 ALTER TABLE `lignefraisforfait`
 ADD `description` VARCHAR(255);
+
+-- --------------------------------------------------------
+
+--
+-- Modification des description pour la table `LigneFraisForfait`
+--
+
+UPDATE `lignefraisforfait` SET `description` = 'Description 1';
 
 -- --------------------------------------------------------
