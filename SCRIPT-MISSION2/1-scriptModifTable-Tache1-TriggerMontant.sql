@@ -14,8 +14,11 @@ CREATE TRIGGER `modifMontant` BEFORE UPDATE ON `lignefraisforfait`
 FOR EACH ROW SET NEW.montant = (SELECT fraisforfait.montant * NEW.quantite FROM fraisforfait 
 WHERE fraisforfait.id = NEW.idFraisForfait);
 
+-- --------------------------------------------------------
+
 --
 -- Ajout du TRIGGER modifmontant en INSERT
+--
 CREATE TRIGGER `modifMontantINSERT` BEFORE INSERT ON `lignefraisforfait` 
 FOR EACH ROW SET NEW.montant = (SELECT fraisforfait.montant * NEW.quantite FROM fraisforfait 
 WHERE fraisforfait.id = NEW.idFraisForfait);
@@ -33,8 +36,11 @@ WHERE fraisforfait.id = NEW.idFraisForfait);
 -- AND `lignefraisforfait`.`idFraisForfait` = 'ETP'
 
 -- --------------------------------------------------------
+
 --
 -- DROP de la foreign key sur ligneFraisForfait
 --
 
 ALTER TABLE lignefraisforfait DROP FOREIGN KEY lignefraisforfait_ibfk_2;
+
+-- --------------------------------------------------------
