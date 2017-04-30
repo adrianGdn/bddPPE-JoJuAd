@@ -83,11 +83,12 @@ CREATE TABLE IF NOT EXISTS `fichefrais` (
 --
 
 CREATE TABLE IF NOT EXISTS `lignefraisforfait` (
+  `id` int(11) NOT NULL auto_increment,
   `idVisiteur` char(4) NOT NULL,
   `mois` char(6) NOT NULL,
   `idFraisForfait` char(3) NOT NULL,
   `quantite` int(11) DEFAULT NULL,
-  PRIMARY KEY (`idVisiteur`,`mois`,`idFraisForfait`),
+  PRIMARY KEY (`id`),
   FOREIGN KEY (`idVisiteur`, `mois`) REFERENCES fichefrais(`idVisiteur`, `mois`),
   FOREIGN KEY (`idFraisForfait`) REFERENCES fraisforfait(`id`)
 ) ENGINE=InnoDB;
