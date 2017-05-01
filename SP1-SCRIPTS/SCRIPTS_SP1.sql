@@ -122,6 +122,7 @@ INSERT INTO `fraisforfait` (`id`, `libelle`, `montant`) VALUES
 ('KM', 'Frais Kilométrique', 0.62),
 ('NUI', 'Nuitée Hôtel', 80.00),
 ('REP', 'Repas Restaurant', 25.00);
+
 --
 -- Contenu de la table `LigneFraisForfait`
 --
@@ -214,13 +215,6 @@ WHERE fraisforfait.id = NEW.idFraisForfait);
 
 -- --------------------------------------------------------
 
---
--- DROP de la foreign key sur ligneFraisForfait
---
-
-ALTER TABLE lignefraisforfait DROP FOREIGN KEY lignefraisforfait_ibfk_2;
-
--- --------------------------------------------------------
 
 -- --------------------------------------------------------
 -- --------------------------------------------------------

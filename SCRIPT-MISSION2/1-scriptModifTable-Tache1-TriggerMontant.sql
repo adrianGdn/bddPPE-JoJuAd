@@ -36,11 +36,3 @@ WHERE fraisforfait.id = NEW.idFraisForfait);
 -- AND `lignefraisforfait`.`idFraisForfait` = 'ETP'
 
 -- --------------------------------------------------------
-
---
--- DROP de la foreign key sur ligneFraisForfait
---
-
-ALTER TABLE lignefraisforfait DROP FOREIGN KEY lignefraisforfait_ibfk_2;
-
--- --------------------------------------------------------
